@@ -1,7 +1,8 @@
-import MainChar as MainChar
-import Strategy as Strategy
-import DoubleJump as DoubleJump
+from Characters import MainChar
+from Jumps import DoubleJump, SimpleJump
 
-Principal = MainChar(Strategy.execute(), 10, 10)
-Principal.setStrategy(DoubleJump())
-Principal.jump()
+SimpleChar = MainChar.Create(SimpleJump.Jump(), 10, 10)
+SimpleChar.jump()
+
+SpecialChar = MainChar.Create(DoubleJump.Jump(), 50, 50)
+SpecialChar.jump()

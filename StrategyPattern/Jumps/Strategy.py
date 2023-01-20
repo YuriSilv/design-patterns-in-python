@@ -6,12 +6,10 @@
 #Em minhas palavras: o padrão de projeto splita/divide um algoritmo que pode ser implementado de muitas formas, cada
 #uma com seu propósito. Logo, ele traz a vantagem de manutenção nos algoritmos específicos.
 
-import abc
+from abc import ABC, abstractclassmethod
 
-class StrategyPattern():
+class Istrategy(ABC):
 
-    __metaclass__ = abc.ABCMeta
-
-    @abc.abstractmethod
+    @abstractclassmethod
     def execute(self):
         pass
